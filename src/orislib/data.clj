@@ -2,6 +2,9 @@
   (:require [clojure.string :as string])
   (:require [orislib.db :as db]))
 
+(def START-CODE 0)
+(def FINISH-CODE 10000)
+
 (defn races []
   (let [q (str "select id, oris_id, name, time, place from race where visible "
                "order by time desc;")]
