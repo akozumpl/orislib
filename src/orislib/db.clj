@@ -30,5 +30,4 @@
 
 (defn execute! [cmnds]
   (jdbc/with-db-transaction [trans db]
-    (doseq [cmd cmnds]
-      (jdbc/execute! trans [cmd]))))
+    (doall (mapcat #(jdbc/execute! trans [%]) cmnds))))
