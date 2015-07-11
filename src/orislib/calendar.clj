@@ -32,6 +32,10 @@
 (defn now []
   (GregorianCalendar.))
 
+(defn now-str []
+  {:added "0.1.7"}
+  (cal-str (now)))
+
 (defn str-cal [str & {:keys [with-time?] :or {with-time? true}}]
   (let [format (SimpleDateFormat. (if with-time? date-time-format date-format))
         date (.parse format str)]
