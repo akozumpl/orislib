@@ -1,4 +1,4 @@
-(defproject orislib "0.1.6"
+(defproject orislib "0.1.7"
   :description "toolset for oris.orientacnibeh.cz, unofficial"
   :url "https://github.com/akozumpl/orislib"
   :license {:name "Eclipse Public License"
